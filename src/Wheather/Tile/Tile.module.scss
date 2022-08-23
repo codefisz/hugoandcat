@@ -1,0 +1,84 @@
+@use '../../scss/fonts';
+@use '../../scss/colors';
+
+.Tile {
+  @at-root #{&}--default{
+    background-image: linear-gradient(colors.$scattered-clouds-top, colors.$scattered-clouds);
+    overflow: hidden;
+  }
+
+  @at-root #{&}--clear-sky{
+    background-image: linear-gradient(colors.$clear-sky-top, colors.$clear-sky);
+  }
+
+  @at-root #{&}--few-clouds{
+    background-image: linear-gradient(colors.$few-clouds-top, colors.$few-clouds);
+  }
+
+  @at-root #{&}--scattered-clouds{
+    background-image: linear-gradient(colors.$scattered-clouds-top, colors.$scattered-clouds);
+  }
+
+  @at-root #{&}--broken-clouds{
+    background-image: linear-gradient(colors.$broken-clouds-top, colors.$broken-clouds);
+  }
+
+  @at-root #{&}--shower-rain{
+    background-image: linear-gradient(colors.$shower-rain-top, colors.$shower-rain);
+  }
+
+  @at-root #{&}--rain{
+    background-image: linear-gradient(colors.$rain-top, colors.$rain-top);
+  }
+
+  @at-root #{&}--thunderstorm{
+    background-image: linear-gradient(colors.$thunderstorm-top, colors.$thunderstorm);
+  }
+
+  @at-root #{&}--snow{
+    background-image: linear-gradient(colors.$snow-top, colors.$snow);
+  }
+
+  @at-root #{&}--mist{
+    background-image: linear-gradient(colors.$mist-top, colors.$mist);
+  }
+
+  @at-root #{&}__day{
+    font-family: fonts.$font-family-condensed;
+    font-size: 1rem;
+  }
+
+  @at-root #{&}__desc{
+    font-size: 1rem;
+    font-variant: small-caps ;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+  }
+
+  @at-root #{&}__main{
+    font-family: fonts.$font-family-condensed;
+    font-size: 2rem;
+    font-variant: small-caps ;
+    font-weight: 600;
+    span {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+
+  @at-root #{&}__secondary{
+    font-family: fonts.$font-family-condensed;
+    font-size: 1rem;
+    font-variant: small-caps ;
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  @at-root #{&}__shadow{
+    position: absolute;
+    bottom: -5%;
+    left: -5%;
+    opacity:0.4;
+  }
+}

@@ -1,0 +1,10 @@
+@use './scss/fonts';
+
+body {
+  margin: 0;
+  font-family: fonts.$font-family-main;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

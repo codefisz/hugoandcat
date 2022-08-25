@@ -1,11 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import Grid from './Grid'
 
 export default function Column( {
   style = {},
-  rows=1,
-  rowHeight='1fr',
+  rows= 'auto-fit',
+  rowHeight= 'max-content',
+  rowHeightMin = '50px',
   className='',
   children } ) {
 
@@ -14,14 +14,14 @@ export default function Column( {
 		marginRight: 'auto',
     width: '100%',
     height: '100%',
-    alignItems: 'end',
     justifyContent: 'center',
     ...style,
     display: 'grid',
-    gridTemplateRows: `repeat( ${ rows }, ${ rowHeight } )`
+    gridAutoRows: `minmax(${ rowHeightMin },${ rowHeight })`,
+    gridTemplateRows: `repeat( ${ rows }, minmax(${ rowHeightMin }, ${ rowHeight }))`
   };
 
 	const containerStyle = css( newStyle );
 
-	return <Grid css={ containerStyle } { ...{ className, children } } columns={1} />;
+	return <div css={ containerStyle } { ...{ className, children } } />;
 }

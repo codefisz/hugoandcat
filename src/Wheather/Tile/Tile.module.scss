@@ -81,4 +81,12 @@
     left: -5%;
     opacity:0.4;
   }
+
+
+}
+
+.no-mobile{
+  @media (max-width: 728px) {
+    display: none
+  }
 }

@@ -1,3 +1,17 @@
+
+##Run project
+In terminal change directory and one of the commands.
+
+Project is prebuild and can either be run with:
+
+For development mode `npm start` 
+or
+For production mode `npm build`
+
+To serve build project you can use `serve -s build`
+
+If you need install `sudo npm install -g serve`
+
 # Weather app design notes
 
 The design team have provided us with a set to gradient colours, fonts and icon assets with which to build the app.
@@ -23,7 +37,6 @@ The design team have provided us with a set to gradient colours, fonts and icon 
 Roboto (https://fonts.google.com/specimen/Roboto)
 
 Roboto Condensed (https://fonts.google.com/specimen/Roboto+Condensed)
-
 
 
 # Getting Started with Create React App
